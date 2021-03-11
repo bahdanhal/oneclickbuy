@@ -22,13 +22,4 @@ $APPLICATION->SetTitle("Корзина");
 		"TEMPLATE_THEME" => "site"
 	)
 );?><br>
-<?$APPLICATION->IncludeComponent(
-	"custom:oneclickbuy",
-	"",
-	Array(
-		"ELEMENT_NUMBER" => "",
-		"PERSON_TYPE" => "1",
-		"DELIVERY" => "1",
-		"PAYSYSTEM" => "1"
-	)
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
