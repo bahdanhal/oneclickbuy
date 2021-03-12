@@ -132,16 +132,6 @@ foreach ($jsTemplates->getChildren() as $jsTemplate)
 
 $displayModeClass = $arParams['DISPLAY_MODE'] === 'compact' ? ' basket-items-list-wrapper-compact' : '';
 ?>
-<?$APPLICATION->IncludeComponent(
-	"custom:oneclickbuy",
-	"",
-	Array(
-		"ELEMENT_NUMBER" => "",
-		"PERSON_TYPE" => "1",
-		"DELIVERY" => "1",
-		"PAYSYSTEM" => "1"
-	)
-);?>
 <?
 if (empty($arResult['ERROR_MESSAGE']))
 {

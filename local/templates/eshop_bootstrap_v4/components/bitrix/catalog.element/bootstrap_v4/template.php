@@ -1,5 +1,4 @@
 <? if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
-
 use Bitrix\Main\Localization\Loc;
 
 /**
@@ -157,18 +156,6 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 }
 
 $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_THEME'] : '';
-if(isset($actualItem['CAN_BUY'])){
-	$APPLICATION->IncludeComponent(
-		"custom:oneclickbuy",
-		"",
-		Array(
-			"ELEMENT_NUMBER" => $arParams['ELEMENT_ID'],
-			"PERSON_TYPE" => "1",
-			"DELIVERY" => "1",
-			"PAYSYSTEM" => "1"
-		)
-	);
-}
 ?>
 
 <div class="bx-catalog-element<?=$themeClass?>" id="<?=$itemIds['ID']?>" itemscope itemtype="http://schema.org/Product">

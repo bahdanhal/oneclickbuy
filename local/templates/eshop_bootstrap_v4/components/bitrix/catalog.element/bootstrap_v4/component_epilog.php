@@ -10,6 +10,21 @@ use Bitrix\Main\Loader;
  */
 
 global $APPLICATION;
+//
+$component = ob_get_contents();
+ob_start();
+$APPLICATION->IncludeComponent(
+	"custom:oneclickbuy",
+	"",
+	Array(
+		"ELEMENT_NUMBER" => $arParams['ELEMENT_ID'],
+		"PERSON_TYPE" => "1",
+		"DELIVERY" => "1",
+		"PAYSYSTEM" => "1"
+	)
+);
+echo $component;
+flush();
 
 if (!empty($templateData['TEMPLATE_LIBRARY']))
 {
